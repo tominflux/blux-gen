@@ -1,0 +1,52 @@
+{
+  "name": "blux-gen",
+  "description": "Static-site generator for blux apps.",
+  "version": "0.1.0",
+  "author": " @tominflux",
+  "bin": {
+    "blux-gen": "./bin/run"
+  },
+  "bugs": "https://github.com/tominflux/blux-gen/issues",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "@oclif/test": "^1.2.7",
+    "chai": "^4.2.0",
+    "globby": "^10.0.2",
+    "mocha": "^5.2.0",
+    "nyc": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/tominflux/blux-gen",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "GPL-3.0-or-later",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "blux-gen",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "tominflux/blux-gen",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
