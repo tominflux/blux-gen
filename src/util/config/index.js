@@ -1,7 +1,7 @@
 const fs = require("fs-extra")
 
 const defaultConfig = {
-    appPath: "./src/index.js"
+    appPath: "src/index.js"
 }
 
 const getConfigExists = async (configPath) => (

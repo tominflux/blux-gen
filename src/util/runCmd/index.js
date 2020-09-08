@@ -1,14 +1,11 @@
+const child = require("child_process")
 
-
-
-
-
-const runCmd = (cmd) => (
+const runCmd = (cmd, cnsl) => (
     new Promise((resolve, reject) => {
         const callback = (error, stdout, stderr) => {
-            if (stdout) console.log(stdout)
-            if (stderr) console.log(stderr)
-            if (error) console.error(error)
+            if (stdout) cnsl.log(stdout)
+            if (stderr) cnsl.log(stderr)
+            if (error) cnsl.error(error)
         }
         const parcelProcess = child.exec(
             cmd, callback
