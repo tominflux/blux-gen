@@ -28,26 +28,25 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`blux-gen hello`](#blux-gen-hello)
+* [`blux-gen build`](#blux-gen-build)
 * [`blux-gen help [COMMAND]`](#blux-gen-help-command)
 
-## `blux-gen hello`
+## `blux-gen build`
 
-Describe the command here
+Build static site.
 
 ```
 USAGE
-  $ blux-gen hello
-
-OPTIONS
-  -n, --name=name  name to print
+  $ blux-gen build
 
 DESCRIPTION
   ...
-  Extra documentation goes here
+    - Clones blux-app repository.
+    - Looks for app config.
+    - Performs parcel build.
 ```
 
-_See code: [src/commands/hello.js](https://github.com/tominflux/blux-gen/blob/v0.1.0/src/commands/hello.js)_
+_See code: [src/commands/build.js](https://github.com/tominflux/blux-gen/blob/v0.1.0/src/commands/build.js)_
 
 ## `blux-gen help [COMMAND]`
 
