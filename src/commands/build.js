@@ -12,10 +12,8 @@ class BuildCmd extends Command {
         const configPath = "./blux-config.json"
         //Get config.
         const config = await getConfig(configPath)
-        //Create cnsl fns.
-        const cnsl = getCnsl(this)
         //Perform build
-        build(config, cnsl)
+        build(config)
     }
 }
 

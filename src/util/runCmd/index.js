@@ -1,6 +1,6 @@
 const child = require("child_process")
 
-const runCmd = (cmd, cnsl) => (
+const runCmd = (cmd) => (
     new Promise((resolve, reject) => {
         const process = child.spawn(
             cmd, {shell: true, stdio: [0, 1, 2]}

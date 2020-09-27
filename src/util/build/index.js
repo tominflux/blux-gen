@@ -20,7 +20,7 @@ const bluxAppDir = (
 */
 
 
-const build = async (config, cnsl) => {
+const build = async (config) => {
     /*
     //Clone Blux App
     await git.Clone(
@@ -41,7 +41,7 @@ const build = async (config, cnsl) => {
     )
     const outPath = "./public"
     await runParcelBuild(
-        inPath, outPath, cnsl
+        inPath, outPath
     )
     //
     cnsl.log("Build Complete.")
