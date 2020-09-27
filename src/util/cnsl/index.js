@@ -4,7 +4,7 @@ const getCnsl = (command) => {
     const log = (msg) => command.log(msg)
     const error = (msg) => command.error(msg)
     return {
-        log, 
+        log,
         error
     }
 }
