@@ -4,12 +4,12 @@ const { copyState } = require("../state")
 
 
 const build = async (config, cnsl) => {
-    //Perform Parcel Build
+    // Perform Parcel Build
     cnsl.log("Building app...")
     const inPath = path.join("./", config.appPath)
     const outPath = "./public"
     await runParcelBuild(inPath, outPath)
-    //Copy state.
+    // Copy state.
     cnsl.log("Copying app state...")
     const stateInPath = path.join("./", config.statePath)
     const stateOutPath = "./public/__state"
